@@ -8,6 +8,8 @@ const convertToId = (value = "") => {
     .replaceAll("?", "")
     .replaceAll(".", "")
     .replaceAll("&", "")
+    .replaceAll('"', "")
+    .replaceAll("*", "")
     .toLowerCase();
 };
 
