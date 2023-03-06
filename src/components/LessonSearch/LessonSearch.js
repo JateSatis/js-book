@@ -42,19 +42,22 @@ const LessonSearch = () => {
         />
         <input type="button" value="Search" onClick={searchLesson} />
       </form>
-      <ul
+      <div
         style={{
           position: "absolute",
           zIndex: 1000,
-          backgroundColor: "beige",
-          padding: 0,
-          margin: 0,
-          cursor: "pointer",
         }}
       >
         {searchedLessons.map((lesson) => (
-          <li
-            style={{ border: "1px solid black" }}
+          <div
+            style={{
+              border: "1px solid black",
+              backgroundColor: "beige",
+              padding: 5,
+              margin: 0,
+              marginBottom: 10,
+              cursor: "pointer",
+            }}
             onClick={() => {
               scrollToComponent(
                 lesson,
@@ -66,9 +69,9 @@ const LessonSearch = () => {
             }}
           >
             {lesson}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </>
   );
 };
