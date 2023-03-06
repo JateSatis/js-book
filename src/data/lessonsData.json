@@ -1,0 +1,50 @@
+{
+  "parts": [
+    {
+      "title": "The JavaScript Language",
+      "lessons": [
+        "An Introduction to JavaScript",
+        "Manuals and specifications",
+        "Code editors",
+        "Developer console",
+        "Hello, world!",
+        "Code structure",
+        "The modern mode, \"use strict\"",
+        "Variables",
+        "Data types",
+        "Interaction: alert, prompt, confirm"
+      ]
+    },
+    {
+      "title": "Browser: Document, Events, Interfaces",
+      "lessons": [
+        "Browser environment, specs",
+        "DOM tree",
+        "Walking the DOM",
+        "Searching: getElement*, querySelector*",
+        "Node properties: type, tag and contents",
+        "Attributes and properties",
+        "Introduction to browser events",
+        "Bubbling and capturing",
+        "Event delegation",
+        "Browser default actions"
+      ]
+    },
+    {
+      "title": "Additional articles",
+      "lessons": [
+        "Popups and window methods",
+        "Cross-window communication",
+        "The clickjacking attack",
+        "ArrayBuffer, binary arrays",
+        "TextDecoder and TextEncoder",
+        "Blob",
+        "File and FileReader",
+        "Fetch",
+        "FormData",
+        "Fetch: Download progress"
+      ]
+    }
+  ],
+  "topComponent": null
+}
