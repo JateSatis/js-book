@@ -58,6 +58,15 @@ const LessonSearch = () => {
               marginBottom: 10,
               cursor: "pointer",
             }}
+            onTouchEnd={() => {
+              scrollToComponent(
+                lesson,
+                document.getElementById("parts_header").getBoundingClientRect()
+                  .height
+              );
+              setInput("");
+              setSearchedLessons([]);
+            }}
             onClick={() => {
               scrollToComponent(
                 lesson,
