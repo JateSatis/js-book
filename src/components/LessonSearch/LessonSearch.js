@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import { LessonsContext } from "../Info";
+import { LessonsContext } from "../../App";
 
 import convertToId from "../../functions/convertToId";
 import scrollToComponent from "../../functions/scrollToComponent";
@@ -40,7 +40,6 @@ const LessonSearch = () => {
           value={input}
           onChange={searchLesson}
         />
-        <input type="button" value="Search" onClick={searchLesson} />
       </form>
       <div
         style={{
@@ -50,15 +49,8 @@ const LessonSearch = () => {
       >
         {searchedLessons.map((lesson) => (
           <div
-            style={{
-              border: "1px solid black",
-              backgroundColor: "beige",
-              padding: 5,
-              margin: 0,
-              marginBottom: 10,
-              cursor: "pointer",
-            }}
-            onClick={() => {
+            className="lesson_anchor"
+            onClick={(e) => {
               setTimeout(() => {
                 scrollToComponent(
                   lesson,

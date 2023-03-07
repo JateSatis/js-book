@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 
 //# Components
-import { LessonsContext } from "../Info";
+import { LessonsContext } from "../../App";
 import Part from "./Part";
 import PartsHeader from "./PartsHeader";
 

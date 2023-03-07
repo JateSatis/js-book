@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 
 //# Components
-import { LessonsContext } from "../Info";
+import { LessonsContext } from "../../App";
 
 //# Functions
 import scrollToComponent from "../../functions/scrollToComponent";

@@ -13,3 +13,9 @@
 .lesson {
   line-height: 2.5;
 }
+
+.lesson_anchor {
+  border: 1px solid black;
+  background-color: beige;
+  cursor: pointer;
+}
