@@ -1,0 +1,110 @@
+{
+  "parts": [
+    {
+      "title": "The JavaScript Language",
+      "lessonsData": [
+        {
+          "title": "An Introduction to JavaScript"
+        },
+        {
+          "title": "Manuals and specifications"
+        },
+        {
+          "title": "Code editors"
+        },
+        {
+          "title": "Developer console"
+        },
+        {
+          "title": "Hello, world!"
+        },
+        {
+          "title": "Code structure"
+        },
+        {
+          "title": "The modern mode, \"use strict\""
+        },
+        {
+          "title": "Variables"
+        },
+        {
+          "title": "Data types"
+        },
+        {
+          "title": "Interaction: alert, prompt, confirm"
+        }
+      ]
+    },
+    {
+      "title": "Browser: Document, Events, Interfaces",
+      "lessonsData": [
+        {
+          "title": "Browser environment, specs"
+        },
+        {
+          "title": "DOM tree"
+        },
+        {
+          "title": "Walking the DOM"
+        },
+        {
+          "title": "Searching: getElement*, querySelector*"
+        },
+        {
+          "title": "Node properties: type, tag and contents"
+        },
+        {
+          "title": "Attributes and properties"
+        },
+        {
+          "title": "Introduction to browser events"
+        },
+        {
+          "title": "Bubbling and capturing"
+        },
+        {
+          "title": "Event delegation"
+        },
+        {
+          "title": "Browser default actions"
+        }
+      ]
+    },
+    {
+      "title": "Additional articles",
+      "lessonsData": [
+        {
+          "title": "Popups and window methods"
+        },
+        {
+          "title": "Cross-window communication"
+        },
+        {
+          "title": "The clickjacking attack"
+        },
+        {
+          "title": "ArrayBuffer, binary arrays"
+        },
+        {
+          "title": "TextDecoder and TextEncoder"
+        },
+        {
+          "title": "Blob"
+        },
+        {
+          "title": "File and FileReader"
+        },
+        {
+          "title": "Fetch"
+        },
+        {
+          "title": "FormData"
+        },
+        {
+          "title": "Fetch: Download progress"
+        }
+      ]
+    }
+  ],
+  "topComponent": null
+}

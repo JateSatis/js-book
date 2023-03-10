@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const LessonPage = () => {
-	return (
-		<div>LessonPage</div>
-	)
-}
+//# Components
+import CourseBundler from "../components/CourseInfo/CourseBundler";
 
-export default LessonPage
+const LessonsPage = ({
+  lesson: { title, part, prevLessonLink, nextLessonLink },
+}) => {
+  return (
+    <div className="lesson_page">
+      <Link to={prevLessonLink}>Previous lesson</Link>
+      <br />
+      {nextLessonLink ? <Link to={nextLessonLink}>Next lesson </Link> : null}
+      <CourseBundler title={title} />
+    </div>
+  );
+};
+
+export default LessonsPage;

@@ -4,12 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+//# Routing provider for the whole application
 import { BrowserRouter as Router } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
+    {/* 
+		//# Setting the basename of the application to "/js-book" so that it is rendered 
+		//# correctly using GitHub pages 
+		*/}
+    <Router basename="/js-book">
       <App />
     </Router>
   </React.StrictMode>

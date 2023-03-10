@@ -10,12 +10,12 @@ import getTopComponent from "../../functions/getTopComponent";
 
 const Parts = () => {
   const [topComponent, setTopComponent] = useState(null);
-  const { lessonsData, setLessonsData } = useContext(LessonsContext);
+  const { data, setData } = useContext(LessonsContext);
 
   const updateTopComponent = () => {
     setTopComponent(getTopComponent("part"));
-    setLessonsData({
-      ...lessonsData,
+    setData({
+      ...data,
       topComponent: topComponent,
     });
   };
@@ -23,12 +23,14 @@ const Parts = () => {
   document.addEventListener("scroll", updateTopComponent);
 
   return (
-    <>
+    <div className="parts">
       <PartsHeader></PartsHeader>
-      {lessonsData.parts.map(({ title, lessons }, index) => (
-        <Part title={title} lessons={lessons} key={index} />
-      ))}
-    </>
+      <div className="width_limiter">
+        {data.parts.map(({ title, lessonsData }, index) => (
+          <Part title={title} lessons={lessonsData} key={index} />
+        ))}
+      </div>
+    </div>
   );
 };
 

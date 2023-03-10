@@ -1,0 +1,131 @@
+@media screen and (max-height: 450px) {
+  .main__navigation {
+    padding-top: 0 !important;
+    margin-top: 4em;
+    min-height: 500px;
+  }
+}
+
+/* 
+# Deleting unnecessary text from the screen when it is too narrow or too squished
+# Changing margin in these cases too
+*/
+@media screen and (max-width: 400px), screen and (max-height: 600px) {
+  .wide-content-text {
+    display: none;
+  }
+
+  .mb {
+    margin-bottom: 1em !important;
+  }
+}
+
+/* 
+# Preventing text from going overflowing when it's too narrow or two squished
+*/
+@media screen and (max-width: 300px), screen and (max-height: 700px) {
+  .main {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .main {
+    font-size: 18px !important;
+  }
+
+  .mb {
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 1220px) {
+  .width_limiter {
+    padding: 0 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__navigation {
+    padding: 0 !important;
+  }
+}
+
+.main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text);
+  line-height: 1.5em !important;
+}
+
+.main__navigation {
+  box-sizing: border-box;
+  width: 100%;
+  height: 90vh;
+  padding: 5em 0 3em;
+  background-color: var(--background);
+  border-bottom: 2px solid var(--text-light);
+}
+
+.main__navigation_title {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--highlight-primary);
+  line-height: 1.5em;
+}
+
+.main__navigation_subtitle {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main__navigation_lessons-search {
+  width: 100%;
+}
+
+.main__navigation_lessons-search > form {
+  display: block;
+  background-color: var(--background-light);
+  padding: 1em;
+  margin: 1em 0 !important;
+}
+
+.main__navigation_lessons-search > form > input {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-size: 1.2em;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  background-color: var(--text);
+  color: var(--background);
+}
+
+.main__navigation_lessons-search > form > input::placeholder {
+  color: var(--background) !important;
+}
+
+.main__navigation_lessons-search > form > input:focus {
+  outline: none;
+}
+
+.width_limiter {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main__navigation > .width_limiter {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mb {
+  margin-bottom: 2em;
+}

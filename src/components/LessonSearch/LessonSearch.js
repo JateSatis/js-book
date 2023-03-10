@@ -1,24 +1,40 @@
 import React, { useState, useContext } from "react";
 
 import { LessonsContext } from "../../App";
+import SearchOutput from "./SearchOutput";
 
 import convertToId from "../../functions/convertToId";
 import scrollToComponent from "../../functions/scrollToComponent";
 
+const getLessons = (parts) => {
+  return parts
+    .reduce((accum, part) => {
+      return accum.concat(part.lessonsData);
+    }, [])
+    .map((lesson) => lesson.title);
+};
+
 const LessonSearch = () => {
+  const clearSearch = () => {
+    setInput("");
+    setSearchedLessons([]);
+  };
+
   const {
-    lessonsData: { parts },
+    data: { parts },
   } = useContext(LessonsContext);
 
   const [input, setInput] = useState("");
   const [searchedLessons, setSearchedLessons] = useState([]);
 
-  const lessons = parts.reduce((accum, part) => {
-    return accum.concat(part.lessons);
-  }, []);
+  const lessons = getLessons(parts);
 
-  const searchLesson = (event) => {
+  const outputLesson = (event) => {
     setInput(event.target.value);
+    if (event.target.value.length <= 2) {
+      setSearchedLessons([]);
+      return;
+    }
 
     const lessonsStripped = lessons.map((lesson) => {
       return convertToId(lesson);
@@ -28,46 +44,44 @@ const LessonSearch = () => {
       return lesson.includes(convertToId(input));
     });
 
-    setSearchedLessons(correctLessons);
+    const outputLessons = lessons.filter((lesson) => {
+      return correctLessons.includes(convertToId(lesson));
+    });
+
+    setSearchedLessons(outputLessons);
+  };
+
+  const startScrolling = (event, lesson) => {
+    setTimeout(() => {
+      setSearchedLessons([]);
+      scrollToComponent(
+        lesson,
+        document.getElementById("parts_header").getBoundingClientRect().height
+      );
+    }, 500);
+    clearSearch();
   };
 
   return (
-    <>
+    <div className="main__navigation_lessons-search mb">
       <form>
         <input
           type="text"
           placeholder="Поиск по учебнику"
           value={input}
-          onChange={searchLesson}
+          onChange={outputLesson}
         />
       </form>
-      <div
-        style={{
-          position: "absolute",
-          zIndex: 1000,
-        }}
-      >
-        {searchedLessons.map((lesson) => (
-          <div
-            className="lesson_anchor"
-            onClick={(e) => {
-              setTimeout(() => {
-                scrollToComponent(
-                  lesson,
-                  document
-                    .getElementById("parts_header")
-                    .getBoundingClientRect().height
-                );
-                setInput("");
-                setSearchedLessons([]);
-              }, 500);
-            }}
-          >
-            {lesson}
-          </div>
+      <div>
+        {searchedLessons.map((lesson, index) => (
+          <SearchOutput
+            key={index}
+            scroll={(event, lesson) => startScrolling(event, lesson)}
+            lesson={lesson}
+          />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

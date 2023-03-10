@@ -1,0 +1,43 @@
+@import url(./reset.css);
+@import url(./header.css);
+@import url(./main_page.css);
+@import url(./parts.css);
+@import url(./course_info.css);
+@import url(./lesson_page.css);
+
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html[data-theme="light"] {
+  --text: #272e38;
+  --background: #fff;
+  --highlight-primary: #cb4757;
+  --highlight-secondary: #fdca8b;
+  --background-light: #7a7a7a;
+  --text-light: #e9e9e9;
+}
+
+html[data-theme="dark"] {
+  --text: #fff;
+  --background: #272e38;
+  --highlight-primary: #cb4757;
+  --highlight-secondary: #fdca8b;
+  --background-light: #9f9f9f;
+  --text-light: #4d4d4d;
+}
+
+.App {
+  background-color: var(--background);
+  position: relative;
+}
+
+.lesson {
+  line-height: 2.5;
+}
+.lesson_anchor {
+  border: 1px solid black;
+  background-color: var(--primary);
+  cursor: pointer;
+}
