@@ -63,10 +63,10 @@ const htmlCodeSeven = () => {
 </script>`;
 };
 
-const HelloWorld = () => {
+const HelloWorld = ({ title }) => {
   return (
     <>
-      <Title>Hello, world!</Title>
+      <Title>{title}</Title>
       <Text>
         This part of the tutorial is about core JavaScript, the language itself.
       </Text>

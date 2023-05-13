@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { FaMoon } from "react-icons/fa";
+import { FaMoon, FaProjectDiagram } from "react-icons/fa";
 
 import { LessonsContext } from "../App";
-import Logo from "../components/Header/Logo";
 
 const Header = () => {
   const { toggleTheme } = useContext(LessonsContext);
@@ -16,7 +15,7 @@ const Header = () => {
         }
         to="/"
       >
-        <Logo></Logo>
+        <FaProjectDiagram className="header__link_logo" />
       </NavLink>
       <button className="header__theme" onClick={toggleTheme}>
         <FaMoon className="header__theme_logo"></FaMoon>

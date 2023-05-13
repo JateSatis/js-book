@@ -10,10 +10,12 @@ import convertToId from "../../functions/convertToId";
 const Part = ({ title, lessons }) => {
   return (
     <section className="part" id={convertToId(title)}>
-      <h1>
-        <Link to={`${convertToId(title)}`}>{title}</Link>
+      <h1 className="part__title">
+        <Link className="part__part-link" to={`${convertToId(title)}`}>
+          {title}
+        </Link>
       </h1>
-      <ul>
+      <ul className="part__lesson-list">
         {lessons.map((lesson, index) => (
           <Lesson part={title} title={lesson.title} key={index} />
         ))}

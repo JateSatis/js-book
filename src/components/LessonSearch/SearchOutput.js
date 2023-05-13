@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchOutput = ({ scroll, lesson }) => {
   return (
-    <div className="lesson_anchor" onClick={(event) => scroll(event, lesson)}>
+    <div className="lesson-anchor" onClick={() => scroll(lesson)}>
       {lesson}
     </div>
   );

@@ -8,7 +8,7 @@ const Layout = () => {
     <>
       <Header />
       <Outlet />
-      <footer>This footer is everywhere</footer>
+      <footer></footer>
     </>
   );
 };

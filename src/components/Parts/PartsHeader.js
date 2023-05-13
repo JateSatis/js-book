@@ -2,9 +2,14 @@ import React, { useState, useEffect, useContext } from "react";
 
 //# Components
 import { LessonsContext } from "../../App";
+import PartNavigator from "./PartNavigator";
 
 //# Functions
-import scrollToComponent from "../../functions/scrollToComponent";
+import {
+  scrollToComponent,
+  scrollToHorizontalComponent,
+} from "../../functions/scrollToComponent";
+import convertToId from "../../functions/convertToId";
 
 const PartsHeader = () => {
   const {
@@ -14,31 +19,32 @@ const PartsHeader = () => {
   const [prevAnchor, setPrevAnchor] = useState(null);
 
   useEffect(() => {
+    const firstPartAnchor = document.getElementById("классы_и_объекты_anchor");
+    firstPartAnchor.classList.add("active-part-anchor");
+  }, []);
+
+  useEffect(() => {
     if (!topComponent) return;
-    if (prevAnchor) prevAnchor.style.color = "var(--text)";
+    if (prevAnchor) prevAnchor.classList.remove("active-part-anchor");
     const topComponentId = topComponent.querySelector("h1").innerText;
-    const anchor = document.getElementById(topComponentId);
-    anchor.style.color = "var(--highlight-primary)";
+    const anchorId = `${convertToId(topComponentId)}_anchor`;
+    const anchor = document.getElementById(anchorId);
+    anchor.classList.add("active-part-anchor");
+    scrollToHorizontalComponent(anchorId, "parts_header", 32);
     setPrevAnchor(anchor);
   }, [topComponent]);
 
   return (
     <nav className="parts__parts-header" id="parts_header">
-      <div className="scroll_inner">
+      <div className="scroll-inner">
         {parts.map((part, index) => (
-          <h1
-            onClick={(e) =>
-              scrollToComponent(
-                e.target.innerText,
-                document.getElementById("parts_header").getBoundingClientRect()
-                  .height
-              )
-            }
-            id={part.title}
+          <PartNavigator
             key={index}
-          >
-            {part.title}
-          </h1>
+            title={part.title}
+            onScroll={(element) =>
+              scrollToComponent({ id: element, offset: 10 })
+            }
+          />
         ))}
       </div>
     </nav>

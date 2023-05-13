@@ -58,7 +58,7 @@ function App() {
 
   return (
     <LessonsContext.Provider value={{ data, setData, theme, toggleTheme }}>
-      <div className="App">
+      <div className="app">
         <Routes>
           {/* //# Layout component is the main blueprint of the app. It contains the header,
 							//# footer and an <Outlet> that represents it's childs

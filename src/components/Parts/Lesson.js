@@ -5,9 +5,16 @@ import convertToId from "../../functions/convertToId";
 
 const Lesson = ({ part, title }) => {
   return (
-    <li className="lesson" id={convertToId(title)}>
-      <Link to={`${convertToId(part)}/${convertToId(title)}`}>{title}</Link>
-    </li>
+    <div className="part__lesson-list_lesson">
+      <li id={convertToId(title)}>
+        <Link
+          className="part__lesson-link"
+          to={`${convertToId(part)}/${convertToId(title)}`}
+        >
+          {title}
+        </Link>
+      </li>
+    </div>
   );
 };
 

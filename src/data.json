@@ -1,107 +1,101 @@
 {
   "parts": [
     {
-      "title": "The JavaScript Language",
+      "title": "Классы и объекты",
       "lessonsData": [
         {
-          "title": "An Introduction to JavaScript"
+          "title": "Конструкторы, инициализаторы и деконструкторы"
         },
         {
-          "title": "Manuals and specifications"
+          "title": "Структуры"
         },
         {
-          "title": "Code editors"
+          "title": "Типы значений и ссылочные типы"
         },
         {
-          "title": "Developer console"
+          "title": "Пространства имен"
         },
         {
-          "title": "Hello, world!"
+          "title": "Глобальные пространства имен"
         },
         {
-          "title": "Code structure"
+          "title": "Модификаторы доступа"
         },
         {
-          "title": "The modern mode, \"use strict\""
+          "title": "Перегрузка методов"
         },
         {
-          "title": "Variables"
+          "title": "Статические члены и модификатор static"
         },
         {
-          "title": "Data types"
+          "title": "Константы, поля и структуры для чтения"
         },
         {
-          "title": "Interaction: alert, prompt, confirm"
+          "title": "Псевдонимы типов и статический импорт"
         }
       ]
     },
     {
-      "title": "Browser: Document, Events, Interfaces",
+      "title": "Объектно-ориентированное программирование",
       "lessonsData": [
         {
-          "title": "Browser environment, specs"
+          "title": "Наследование"
         },
         {
-          "title": "DOM tree"
+          "title": "Преобразование типов"
         },
         {
-          "title": "Walking the DOM"
+          "title": "Виртуальные методы и свойства"
         },
         {
-          "title": "Searching: getElement*, querySelector*"
+          "title": "Скрытие методов и свойств"
         },
         {
-          "title": "Node properties: type, tag and contents"
+          "title": "Различие переопределения и скрытия методов"
         },
         {
-          "title": "Attributes and properties"
+          "title": "Абстрактные классы"
         },
         {
-          "title": "Introduction to browser events"
+          "title": "Обобщенные типы"
         },
         {
-          "title": "Bubbling and capturing"
+          "title": "Ограничения обобщений"
         },
         {
-          "title": "Event delegation"
-        },
-        {
-          "title": "Browser default actions"
+          "title": "Наследование обобщенных типов"
         }
       ]
     },
     {
-      "title": "Additional articles",
+      "title": "Интерфейсы",
       "lessonsData": [
         {
-          "title": "Popups and window methods"
+          "title": "Определение интерфейсов"
         },
         {
-          "title": "Cross-window communication"
+          "title": "Применение интерфейсов"
         },
         {
-          "title": "The clickjacking attack"
+          "title": "Явная реализация интерфейсов"
         },
         {
-          "title": "ArrayBuffer, binary arrays"
+          "title": "Интерфейсы в базовых и производных классах"
         },
         {
-          "title": "TextDecoder and TextEncoder"
+          "title": "Наследование интерфейсов"
         },
         {
-          "title": "Blob"
+          "title": "Интерфейсы в обобщениях"
         },
         {
-          "title": "File and FileReader"
+          "title": "Копирование объектов"
         },
         {
-          "title": "Fetch"
+          "title": "Сортировка объектов"
         },
         {
-          "title": "FormData"
-        },
-        {
-          "title": "Fetch: Download progress"
+          "title": "Ковариантность интерфейсов"
         }
       ]
     }

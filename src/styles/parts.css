@@ -3,7 +3,7 @@
     overflow-x: scroll;
   }
 
-  .scroll_inner {
+  .scroll-inner {
     min-width: 400px;
   }
 
@@ -14,8 +14,15 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .part__lesson-list {
+    columns: 1 !important;
+  }
+}
+
 .parts {
   width: 100%;
+  counter-reset: part;
 }
 
 .parts__parts-header {
@@ -29,10 +36,102 @@
   padding: 0 2em;
 }
 
-.scroll_inner {
+.scroll-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--text);
+  max-width: 800px;
   height: 100%;
+  margin: 0 auto;
+}
+
+.parts__parts-header_part-wrapper {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.parts__parts-header_part {
+  box-sizing: border-box;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 70%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-part-anchor {
+  box-sizing: border-box;
+  color: var(--highlight-primary);
+  border-bottom: 2px solid var(--highlight-primary);
+}
+
+.parts__parts-header_part-wrapper:nth-of-type(2) .parts__parts-header_part {
+  border-left: 2px solid var(--text);
+  border-right: 2px solid var(--text);
+}
+
+.part {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin: 4em 0;
+  counter-reset: lesson;
+  counter-increment: part;
+}
+
+.part__lesson-link {
+  color: var(--link);
+}
+
+.part__part-link {
+  color: var(--text);
+  text-decoration: none; /* no underline */
+}
+
+.part__lesson-link:focus,
+.part__lesson-link:hover,
+.part__part-link:focus,
+.part__part-link:hover {
+  color: var(--highlight-primary);
+}
+
+.part__part-link::before {
+  content: "🔗";
+  margin-right: 0.5em;
+}
+
+.part__title {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin: 0 0 1em;
+}
+
+.part__lesson-list {
+  box-sizing: border-box;
+  column-gap: 2em;
+  columns: 3;
+  width: 100%;
+}
+
+.part__lesson-list_lesson {
+  display: flex;
+  counter-increment: lesson;
+  margin: 0 0 1em;
+}
+
+.part__lesson-list_lesson::before {
+  box-sizing: border-box;
+  width: 2.5em;
+  text-align: right;
+  margin-right: 0.5em;
+  padding: 0 1px;
+  font-size: 0.7em;
+  content: counter(part) "." counter(lesson);
 }
