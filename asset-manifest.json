@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/js-book/static/css/main.47df9550.css",
-    "main.js": "/js-book/static/js/main.030c450f.js",
+    "main.css": "/js-book/static/css/main.81cb9b1e.css",
+    "main.js": "/js-book/static/js/main.7b484f55.js",
     "static/js/787.69a20f00.chunk.js": "/js-book/static/js/787.69a20f00.chunk.js",
     "static/media/HelveticaNeueCyr-LightItalic.ttf": "/js-book/static/media/HelveticaNeueCyr-LightItalic.8d4fa63ad998071c6875.ttf",
     "static/media/HelveticaNeueCyr-ThinItalic.ttf": "/js-book/static/media/HelveticaNeueCyr-ThinItalic.c6a8d318290ef10a2f2f.ttf",
@@ -14,12 +14,12 @@
     "static/media/HelveticaNeueCyr-Medium.ttf": "/js-book/static/media/HelveticaNeueCyr-Medium.bfdbae3c80f7aa49c618.ttf",
     "static/media/HelveticaNeueCyr-Bold.ttf": "/js-book/static/media/HelveticaNeueCyr-Bold.613e930355ab0b59fc48.ttf",
     "index.html": "/js-book/index.html",
-    "main.47df9550.css.map": "/js-book/static/css/main.47df9550.css.map",
-    "main.030c450f.js.map": "/js-book/static/js/main.030c450f.js.map",
+    "main.81cb9b1e.css.map": "/js-book/static/css/main.81cb9b1e.css.map",
+    "main.7b484f55.js.map": "/js-book/static/js/main.7b484f55.js.map",
     "787.69a20f00.chunk.js.map": "/js-book/static/js/787.69a20f00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.47df9550.css",
-    "static/js/main.030c450f.js"
+    "static/css/main.81cb9b1e.css",
+    "static/js/main.7b484f55.js"
   ]
 }
