@@ -6,6 +6,7 @@ const WideContentLinks = ({ prevLessonLink, nextLessonLink }) => {
   return (
     <>
       <Link
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="lesson-page__prev-lesson-link lesson-link wide-content"
         to={prevLessonLink}
       >
@@ -13,6 +14,7 @@ const WideContentLinks = ({ prevLessonLink, nextLessonLink }) => {
       </Link>
       {nextLessonLink ? (
         <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="lesson-page__next-lesson-link lesson-link wide-content"
           to={nextLessonLink}
         >

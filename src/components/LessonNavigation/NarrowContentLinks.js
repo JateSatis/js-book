@@ -11,6 +11,7 @@ const NarrowContentLinks = ({ prevLessonLink, nextLessonLink }) => {
         </div>
         <div className="lesson-page__mobile_link-wrapper">
           <Link
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="lesson-page__mobile_prev-lesson-link mobile-lesson-link"
             to={prevLessonLink}
           >
@@ -18,6 +19,7 @@ const NarrowContentLinks = ({ prevLessonLink, nextLessonLink }) => {
           </Link>
           {nextLessonLink ? (
             <Link
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="lesson-page__mobile_prev-lesson-link mobile-lesson-link"
               to={nextLessonLink}
             >

@@ -5,6 +5,7 @@
 @import url(./parts.css);
 @import url(./course_info.css);
 @import url(./lesson-page.css);
+@import url(./part-page.css);
 
 * {
   font-family: HelveticaNeueCyr;

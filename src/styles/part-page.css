@@ -1,0 +1,40 @@
+@media screen and (max-width: 1000px) {
+  .part-page__content-wrapper {
+    padding: 0 1em;
+  }
+}
+
+.part-page-wrapper {
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+.part-page__lessons-wrapper {
+  width: 100%;
+  box-sizing: border-box !important;
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+.part-page__lesson-link:first-child {
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+.part-page__lesson-link:last-child {
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.part-page__lesson-link {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 1em;
+  background-color: var(--text-light);
+  border: 2px solid var(--background-light);
+}
+
+.part-page__lesson-link:hover {
+  background-color: var(--highlight-primary);
+}

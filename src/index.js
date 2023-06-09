@@ -14,7 +14,7 @@ root.render(
 		//# Setting the basename of the application to "/js-book" so that it is rendered 
 		//# correctly using GitHub pages 
 		*/}
-    <Router basename="/js-book">
+    <Router>
       <App />
     </Router>
   </React.StrictMode>

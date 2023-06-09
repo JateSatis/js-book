@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 
 //# Components
@@ -9,8 +9,8 @@ import NarrowContentLinks from "../components/LessonNavigation/NarrowContentLink
 const LessonsPage = ({
   lesson: { title, part, prevLessonLink, nextLessonLink },
 }) => {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (

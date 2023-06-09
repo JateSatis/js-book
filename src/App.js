@@ -1,5 +1,5 @@
 import "./styles/app.css";
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
 
 //# Hooks
@@ -39,8 +39,6 @@ function App() {
 
   const [data, setData] = useState(data_json);
   const [theme, setTheme] = useTheme(preferedTheme);
-
-  useEffect(() => {}, []);
 
   const toggleTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
